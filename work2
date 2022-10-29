@@ -34,4 +34,22 @@ void gpio_callback(uint gpio, uint32_t events) {
         printf("Press");
     }else{
         printf("Release");
+    }
+}
+int main(){
+    const float conversion_factor = 100.0f / (1<<12)
+    uint_t old_time1 = time_us_64();
+    uint_t old_time2 = time_us_64();
+    init_io();
+    gpio_set_irq_enabled_with_callback(SW_PIN, GPIO_IRQ_EDGE_FALL|);
+
+
+
+
+
+while (true){
+    if(time_us_64() - old_time1 > 1000000){
+    old_time1 = time_us_64();
+
+
         
